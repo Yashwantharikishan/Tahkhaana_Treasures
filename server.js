@@ -36,7 +36,7 @@ app.use("/api/v1/product", productRoutes);
 
 //rest API
 app.use("*", function (req, res) {
-  resizeBy.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 // app.get("/", function (req, res) {
 //   res.send({
